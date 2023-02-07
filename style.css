@@ -1,0 +1,368 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #070724;
+  color: #ffffff;
+  visibility: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 1rem;
+  flex: 0 1 60%;
+  border-bottom: 1px solid #ffffff4d;
+  padding: 25px;
+}
+
+@media screen and (max-width: 1000px) {
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-content .solar-system li a {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+  }
+
+  main {
+    padding-right: 18px;
+  }
+  .image-container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.toggle-button {
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  opacity: 1;
+}
+@media screen and (max-width: 640px) {
+  .toggle-button {
+    display: flex;
+    cursor: pointer;
+    top: 2rem;
+    right: 5rem;
+  }
+
+  .nav-content {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .nav-content .solar-system {
+    flex-direction: column;
+    width: 100%;
+  }
+  .nav-content .solar-system li {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+    font-size: 15px;
+    /* opacity: 1; */
+  }
+
+  .nav-content .solar-system li a {
+    padding: 8.5px;
+    color: rgba(255, 255, 255, 1);
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .nav-content {
+    display: none;
+  }
+
+  .nav-content.active {
+    display: flex;
+  }
+
+  .planets {
+    margin: 0;
+    padding-bottom: 15px;
+  }
+
+  header {
+    display: flex;
+    align-items: flex-start;
+    /* padding-left: 55px; */
+  }
+
+  .nav-content .solar-system li:hover {
+    transform: none;
+  }
+
+  /* .image-container {
+    margin: 50px auto;
+  } */
+}
+
+@media screen and (max-width: 487px) {
+  footer {
+    flex-direction: column;
+  }
+  .footer {
+    width: 100%;
+    height: 48px;
+    /* border: 1px solid #f8f5f5fc; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    font-size: 12px;
+    margin: 8px;
+  }
+  .features {
+    font-size: 8px;
+    padding-right: 50px;
+    width: 100%;
+  }
+  .parameters {
+    font-size: 15px;
+    width: 100%;
+  }
+}
+
+.planets {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 28px;
+  font-weight: 400;
+  font-family: "Antonio", sans-serif;
+}
+
+.nav-content {
+  flex: 0 1 40%;
+}
+
+.nav-content a {
+  text-decoration: none;
+}
+
+.nav-content .solar-system {
+  list-style: none;
+  text-transform: uppercase;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 25px;
+}
+
+.nav-content .solar-system li a {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav-content .solar-system li {
+  padding: 15px;
+  transition: transform 0.3s;
+}
+
+.nav-content .solar-system li:hover {
+  transform: translateY(-5px) scale(1.5);
+}
+
+@media screen and (max-width: 870px) {
+  .nav-content .solar-system li {
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .nav-content .solar-system li {
+    padding: 1.5px;
+  }
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 100px;
+}
+
+@media screen and (max-width: 870px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-right: 48px;
+}
+
+.image-container {
+  display: grid;
+  padding-right: 50px;
+}
+
+@media screen and (max-width: 870px) {
+  .image-container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 40px;
+  }
+}
+
+.mercury {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  border-radius: 50%;
+  align-self: center;
+  justify-self: flex-end;
+}
+
+@media screen and (max-width: 870px) {
+  .mercury {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 70%;
+    max-height: 70%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .mercury {
+    max-width: 50%;
+    max-height: 50%;
+  }
+}
+.wikipedia {
+  margin: 25px 0px 30px -228px;
+  opacity: 0.3;
+  margin-right: -30px;
+}
+
+.overview {
+  width: 350px;
+  height: 48px;
+  border: 1px solid #f8f5f5fc;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  font-size: 12px;
+  margin: 8px;
+}
+
+.overview:hover {
+  background-color: #419ebb;
+}
+
+.overview a {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  letter-spacing: 2.57px;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+span {
+  padding-right: 12px;
+  opacity: 0.3;
+}
+
+.planet-info {
+  width: 350px;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 400;
+  font-family: "Antonio", sans-serif;
+  text-transform: uppercase;
+  line-height: 103.52px;
+}
+
+.planet-info {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.wiki-span {
+  display: inline-block;
+  padding-left: 10px;
+  opacity: 0.9;
+}
+
+.wiki-logo {
+  color: #fff;
+  width: 12px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer {
+  border: 1px solid rgba(232, 217, 217, 0.2);
+  width: 235px;
+  height: 100px;
+  padding: 20px;
+  margin-top: 60px;
+  padding: 15px;
+}
+
+.parameters {
+  font-size: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 50px;
+  font-family: "Antonio", sans-serif;
+}
+
+.features {
+  font-size: 11px;
+  font-weight: 700;
+  opacity: 0.4;
+  text-transform: uppercase;
+}
