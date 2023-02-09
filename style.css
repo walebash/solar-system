@@ -341,6 +341,7 @@ footer {
   align-items: center;
   column-gap: 20px;
   flex-wrap: wrap;
+  padding-bottom: 20px;
 }
 
 .footer {
